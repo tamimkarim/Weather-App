@@ -31,7 +31,7 @@
         <div class="weather-status text-white text-center">
             <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
             <h1 id="name">City</h1>
-            <h3 id="temp"><span>0</span>&deg;C</h3>
+            <h3 ><span id="temp">0</span>&deg;C</h3>
             <h1 id="lead"></h1>
         </div>
     </div>
@@ -45,7 +45,7 @@
 
 
         button.addEventListener('click',function () {
-        fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid=4d9cfd3add229f4d16c580fe2566b635')
+        fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid=4d9cfd3add229f4d16c580fe2566b635&units=metric')
         .then(res => res.json())
         .then(data =>  {
              console.log(data.name);
